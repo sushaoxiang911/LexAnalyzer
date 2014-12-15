@@ -1,0 +1,67 @@
+($  Use this program to test your lexical analyzer.  Note that
+    this program has errors in it so your output will flag
+    these with the token number 99.  Note also that this program
+    does not text all possible errors.  You should make
+    your own test programs to fully text your lexical analyzer.
+$)
+
+
+PROGRAM Test0;
+
+VARIABLES
+     x1, y1, z1 : REAL;
+     a1b, b1c, c1a : BOOLEAN;
+     Int_1, Int_a_1 : INTEGER;
+
+{    READ(input1 x1, y1, z1);
+     IF x / 2 == y OR y*2 <> z THEN WRITE(output2, x+z)
+          ELSE ab = FALSE;
+     ok2 = 0; 
+     ok3 = 0; 
+     
+     a3b  = 0;
+
+     a_   = 0;	($ identifier can't end with an underscore        $)
+     a__b = 0;	($ identifier can't have two adjacent underscores $)
+     3ab  = 0;	($ name must begin with a letter                  $)
+     ab?  = 0;	($ only alphanumeric and underscore allowed       $)
+	 ab = 0.0;	($ no digit $)
+     a5 = 01;   ($ invalid integer $)
+     a6 = +0;   ($ invalid integer $)
+
+     b9 = 3.1415;
+     b8 = 6.02x10^23;
+     b7 = 6.67x10^-11; 
+     b6 = -6.67x10^-11;
+     b5 = 5.;
+
+     b4 = 6.67x10^;  ($ empty exponent$)
+
+($ This is a program in an imaginary program language.
+   Use it to check your lexical analyzer                          $)
+
+($****************************************************************$)
+                               ($$)
+                               ($
+$)
+
+
+($  This is a comment -- it should not appear $) 
+
+($)
+($$)
+
+($) the lexer should remove this $)
+($ and ) this $)
+
+      ($    
+      $)
+
+($  This comment has $ dollar $ signs $) 
+($  The 2nd half of this line $) 'should appear in the output'
+
+     READ( "this is a 'good' string" );
+     WrItE( 'this is also a "good" string' );
+     READ( "this is not " a " good string" );
+
+}
